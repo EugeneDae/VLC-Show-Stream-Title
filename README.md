@@ -18,7 +18,7 @@ C:\Program Files\VideoLAN\VLC\vlc.exe --extraintf=luaintf --lua-intf=show-stream
 
 ### macOS
 1. Copy show-stream-title.lua into `/Applications/VLC.app/Contents/MacOS/share/lua/intf/`.
-2. Go to Preferences. At the bottom of the window click “Show All”.
+2. Go to VLC > Preferences. At the bottom of the window click “Show All”.
 3. Choose Interface > Main interfaces. Set “Extra interface modules” to `luaintf`.
 4. Choose Interface > Main interfaces > Lua. Set “Lua interface” to `show-stream-title`.
 
@@ -28,10 +28,12 @@ Optionally, if don’t want to change VLC preferences, simply run the following 
 ```
 
 ### Note to all users
-By default, VLC also tries to show a title of a video. You may want to disable this feature if you plan to use this extension. If you’re on Windows, go to Tools > Preferences > Subtitles/OSD > uncheck “Show media title on video start”. If you’re on macOS, go to VLC > Preferences, at the bottom of the window click “Show All”, then Video > uncheck “Show media title on video”.
+By default, VLC also tries to show a title of a video. You may want to disable this feature if you plan to use this extension. If you’re on Windows, go to Tools > Preferences > Subtitles/OSD > uncheck “Show media title on video start”. If you’re on macOS, go to VLC > Preferences, at the bottom of the window click “Show All”, choose Video, uncheck “Show media title on video”.
 
 ### How to set a custom title?
-Use a playlist — see [sample.xspf](https://raw.githubusercontent.com/EugeneDae/VLC-Show-Stream-Title/master/sample.xspf).
+1. If you’re on Windows, go to Tools > Preferences, choose Interface tab, under “Playlist and Instances” check “Display playlist tree”. If you’re on Mac, go to VLC > Preferences > Show All > Playlist, check “Display playlist tree”.
+
+2. See [sample.xspf](https://raw.githubusercontent.com/EugeneDae/VLC-Show-Stream-Title/master/sample.xspf).
 
 ## Other notes
 Tested to work with VLC 3.
