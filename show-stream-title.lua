@@ -1,7 +1,7 @@
 -- local inspect = require('inspect')
 
 function descriptor()
-	return {
+    return {
         title = 'Show Stream Title';
         version = '0.1';
         author = 'Dae';
@@ -10,14 +10,14 @@ function descriptor()
                    .. 'using the built-in OSD functionality of VLC.';
         shortdesc = 'Show Stream Title';
         capabilities = {}
-	}
+    }
 end
 
 function main()
     local item = nil
     
-	while true do
-		if vlc.volume.get() == -256 then break end
+    while true do
+        if vlc.volume.get() == -256 then break end
         
         item = vlc.input.item()
         
@@ -48,11 +48,11 @@ function main()
         end
         
         sleep(1)
-	end
+    end
 end
 
 function sleep(sec)
-	vlc.misc.mwait(vlc.misc.mdate() + sec * 1000000)
+    vlc.misc.mwait(vlc.misc.mdate() + sec * 1000000)
 end
 
 function get_parent_for(item_id)
