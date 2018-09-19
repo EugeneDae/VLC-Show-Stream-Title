@@ -8,9 +8,11 @@ Possible use case: a computer-controlled TV that switches between live streaming
 ## Setup
 ### Windows
 1. Copy show-stream-title.lua into `C:\Program Files\VideoLAN\VLC\lua\intf`.
-2. Launch VLC from cmd.exe or Start > Run:
 
-	C:\Program Files\VideoLAN\VLC\vlc.exe --extraintf=luaintf --lua-intf=show-stream-title
+2. Launch VLC from cmd.exe or Start > Run:
+```
+C:\Program Files\VideoLAN\VLC\vlc.exe --extraintf=luaintf --lua-intf=show-stream-title
+```
 
 **A note for advanced users:** if you want this extension to be enabled in VLC by default (so you could launch VLC in a standard way), you need to edit `C:\Users\<username>\AppData\Roaming\vlc\vlcrc`. Set `extraintf=luaintf` and `lua-intf=show-stream-title`. Due to a bug in the current Windows version of VLC (which is 3.0.4 as of writing), the `extraintf` setting will be reset to simply `lua` if you open the preferences window of VLC, and the extension will stop working. For this reason, it’s recommended to use the aforementioned command.
 
@@ -21,7 +23,9 @@ Possible use case: a computer-controlled TV that switches between live streaming
 4. Choose Interface > Main interfaces > Lua. Set “Lua interface” to `show-stream-title`.
 
 Optionally, if don’t want to change VLC preferences, simply run the following command in Terminal.app after step #1:
-`/Applications/VLC.app/Contents/MacOS/VLC --extraintf=luaintf --lua-intf=show-stream-title`.
+```
+/Applications/VLC.app/Contents/MacOS/VLC --extraintf=luaintf --lua-intf=show-stream-title
+```
 
 ### Note for all users
 By default, VLC also tries to show a title of a video. You may want to disable this feature if you plan to use this extension. If you’re on Windows, go to Tools > Preferences > Subtitles/OSD > uncheck “Show media title on video start”. If you’re on macOS, go to VLC > Preferences, at the bottom of the window click “Show All”, then Video > uncheck “Show media title on video”.
