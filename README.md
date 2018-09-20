@@ -1,7 +1,7 @@
 # VLC Show Stream Title
 VLC extension that shows the title of the currently playing video stream using the built-in OSD functionality of VLC. 
 
-Possible use case: a computer-controlled TV that switches between live streaming web cameras. If installed in a public place, you may want the public to know what’s on the screen right now. The extension allows you to set custom titles even for those streams that you don’t own (e.g. from YouTube).
+Possible use case: a computer-controlled TV that alternates between live streaming web cameras. If installed in a public place, you may want the public to know what’s on the screen right now. The extension allows you to set custom titles even for those streams that you don’t own (e.g. from YouTube).
 
 ![Show Stream Title in VLC](https://raw.githubusercontent.com/EugeneDae/VLC-Show-Stream-Title/master/screenshot.jpg)
 
@@ -28,7 +28,7 @@ Optionally, if don’t want to change VLC preferences, simply run the following 
 ```
 
 ### Note to all users
-By default, VLC also tries to show a title of a video. You may want to disable this feature if you plan to use this extension. If you’re on Windows, go to Tools > Preferences > Subtitles/OSD > uncheck “Show media title on video start”. If you’re on macOS, go to VLC > Preferences, at the bottom of the window click “Show All”, choose Video, uncheck “Show media title on video”.
+VLC — by default — also tries to show the title of the currently playing video. If you plan on using this extension, you might want to disable this feature. If you’re on Windows, go to Tools > Preferences > Subtitles/OSD > uncheck “Show media title on video start”. If you’re on macOS, go to VLC > Preferences, at the bottom of the window click “Show All”, choose Video, uncheck “Show media title on video”.
 
 ### How to set a custom title?
 1. If you’re on Windows, go to Tools > Preferences, choose Interface tab, under “Playlist and Instances” check “Display playlist tree”. If you’re on Mac, go to VLC > Preferences > Show All > Playlist, check “Display playlist tree”.
