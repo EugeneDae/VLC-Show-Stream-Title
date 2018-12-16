@@ -1,9 +1,9 @@
--- local inspect = require('inspect')
+-- local inspect = require('inspect') -- https://github.com/kikito/inspect.lua
 
 function descriptor()
     return {
         title = 'Show Stream Title';
-        version = '0.1';
+        version = '0.2 (dev)';
         author = 'Dae';
         url = 'https://github.com/EugeneDae/VLC-Show-Stream-Title';
         description = 'Shows the title of the currently playing video stream '
@@ -24,7 +24,7 @@ function main()
         if item and vlc.playlist.status() == 'playing' then
             local meta = item:metas()
             
-            if meta.url then
+            if meta.url or ends_with(meta.filename, '.m3u8') then
                 if not meta.custom_title then
                     local parent = get_parent_for(vlc.playlist.current())
                     
@@ -75,6 +75,10 @@ function get_parent_for(item_id)
     finder(playlist)
     
     return result
+end
+
+function ends_with(str, ending)
+   return ending == '' or str:sub(-#ending) == ending
 end
 
 main()
